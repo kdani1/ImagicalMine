@@ -86,6 +86,10 @@ class EntityDamageEvent extends EntityEvent implements Cancellable{
 		}
 	}
 
+                if($entity->getHealth() < ($damage->getDamage())){
+                $entity->setHealth($entity->getHealth() - ($entity->getHealth()));
+}
+
 	/**
 	 * @return int
 	 */
